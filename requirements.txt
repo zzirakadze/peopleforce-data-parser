@@ -1,0 +1,8 @@
+python-dotenv==0.21.1
+selenium~=4.8.0
+pydantic==1.10.5
+psycopg2-binary==2.9.5
+chromedriver-autoinstaller==0.4.0
+beautifulsoup4==4.11.2
+pandas==1.5.3
+openpyxl==3.1.1

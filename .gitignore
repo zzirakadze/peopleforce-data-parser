@@ -1,0 +1,12 @@
+.idea
+venv
+__pycache__/
+*.pyc
+.vscode
+.env
+.pytest_cache
+.~lock.ppf_data.xlsx#
+.ppf_data.xlsx#
+.ppf_data.xlsx
+/.ppf_data.xlsx
+ppf_data.xlsx

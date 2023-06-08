@@ -1,0 +1,30 @@
+variables:
+  PYTHONPATH: "$CI_PROJECT_DIR"
+
+image: python:3.9-slim-buster
+
+stages:
+  - execute
+
+.setup: &python_setup |
+  export PYTHONPATH="$PYTHONPATH"
+  pip install virtualenv
+  virtualenv venv
+  source venv/bin/activate
+  apt-get update
+  apt-get -y install libpq-dev
+  pip install -r requirements.txt
+
+
+execution:
+  allow_failure: false
+  stage: execute
+  before_script:
+    - echo "STARTING EXECUTION"
+    - *python_setup
+  script:
+    - python ppf_parser.py
+  after_script:
+    - echo "FINISHED EXECUTION"
+
+
